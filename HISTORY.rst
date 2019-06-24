@@ -6,3 +6,8 @@ History
 ------------------
 
 * First release.
+
+0.1.1 (2019-06-24)
+==================
+
+* Fix for weird vcf format.
