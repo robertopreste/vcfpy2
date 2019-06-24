@@ -11,3 +11,8 @@ History
 ==================
 
 * Fix for weird vcf format.
+
+0.1.2 (2019-06-25)
+==================
+
+* Fix handling of error with try-except clause (for the moment).
