@@ -234,11 +234,18 @@ class Call:
         self.plodity = None
         if self.data.get("GT", None) is not None and len(self.data.get("GT", None)) != 0:
             self.gt_alleles = []
-            for allele in ALLELE_DELIM.split(self.data["GT"][0]):
-                if allele == ".":
-                    self.gt_alleles.append(None)
-                else:
-                    self.gt_alleles.append(int(allele))
+            try:
+                for allele in ALLELE_DELIM.split(self.data["GT"]):
+                    if allele == ".":
+                        self.gt_alleles.append(None)
+                    else:
+                        self.gt_alleles.append(int(allele))
+            except TypeError:
+                for allele in ALLELE_DELIM.split(self.data["GT"][0]):
+                    if allele == ".":
+                        self.gt_alleles.append(None)
+                    else:
+                        self.gt_alleles.append(int(allele))
             self.called = all([al is not None for al in self.gt_alleles])
             self.ploidty = len(self.gt_alleles)
 
