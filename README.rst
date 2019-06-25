@@ -6,6 +6,9 @@ vcfpy2
     :alt: Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.
     :target: https://www.repostatus.org/#wip
 
+.. image:: https://travis-ci.com/robertopreste/vcfpy2.svg?branch=master
+    :target: https://travis-ci.com/robertopreste/vcfpy2
+
 .. image:: https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg
    :target: https://saythanks.io/to/robertopreste
 
